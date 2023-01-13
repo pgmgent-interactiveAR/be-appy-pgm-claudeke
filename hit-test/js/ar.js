@@ -1,4 +1,3 @@
-import alienUrl from '../dist/assets/models/green_alien_wave.glb' 
 import * as THREE from 'three';
 import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader';
 
