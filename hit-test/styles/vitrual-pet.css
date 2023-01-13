@@ -1,0 +1,11 @@
+.section--pet {
+    background-color: transparent;
+
+    align-items: center;
+}
+
+.btns--pet {
+    width: 60%;
+
+    grid-template-columns: 1fr 1fr 1fr;
+}
