@@ -1,4 +1,4 @@
-import alienUrl from '../dist/assets/models/green_alien_wave.glb' 
+import alienUrl from '../dist/assets/models/green_alien_wave.glb?url' 
 import * as THREE from 'three';
 import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader';
 
@@ -11,6 +11,8 @@ const app = () => {
             alert('not comp');
         }
     };
+
+    console.log(alienUrl)
 
     const activateXR = async () => {
         // create canvas and initialize WebGL Context
@@ -37,34 +39,16 @@ const app = () => {
             }
         );
         
-        // materials for cube
-        const materials = [
-            new THREE.MeshBasicMaterial({
-                color: 'red'
-            }),
-            new THREE.MeshBasicMaterial({
-                color: 'blue'
-            }),
-            new THREE.MeshBasicMaterial({
-                color: 'green'
-            }),
-            new THREE.MeshBasicMaterial({
-                color: 'purple'
-            }),
-            new THREE.MeshBasicMaterial({
-                color: 'skyblue'
-            }),
-            new THREE.MeshBasicMaterial({
-                color: 'darkblue'
-            }),
-        ];
-
-        const cube = new THREE.Mesh(
-            new THREE.BoxGeometry(0.2, 0.2, 0.2),
-            materials
-        );
-        // cube.position.set(0, 0, -1);
-        // scene.add(cube);
+        let alien;
+        loader.load (
+            alienUrl,
+            function(gltf){
+                alien = gltf.scene;
+                alien.scale.set(.5,.5,.5);
+                alien.visible = true;
+                scene.add(alien);
+            }
+        )
 
         const renderer = new THREE.WebGLRenderer({
             alpha: true,
@@ -85,9 +69,10 @@ const app = () => {
         session.updateRenderState({
             baseLayer: new XRWebGLLayer(session, gl),
         });
+
         session.addEventListener('select', (event) => {
-            if (cube) {
-                const clone = cube.clone();
+            if (alien) {
+                const clone = alien.clone();
                 clone.position.copy(reticle.position);
                 scene.add(clone);
             }
@@ -111,8 +96,6 @@ const app = () => {
             const pose = frame.getViewerPose(referenceSpace);
 
             if (pose) {
-                rotateCube(cube, 0.01, 0.02);
-
                 const view = pose.views[0];
 
                 const viewport = session.renderState.baseLayer.getViewport(view);
@@ -137,11 +120,6 @@ const app = () => {
             }
         };
         session.requestAnimationFrame(onXRFrame);
-    };
-
-    const rotateCube = (cubeToRotate, speedX = 0, speedY = 0) => {
-        cubeToRotate.rotation.y += speedX;
-        cubeToRotate.rotation.x += speedY;
     };
 
     init();
