@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@700&display=swap');
 /* VARIABLES */
 :root {
     --color__primary: #BDE038;
@@ -13,6 +14,7 @@
     box-sizing: border-box;
 
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+
 }
 
 /* LAYOUTS */
@@ -38,25 +40,28 @@
     justify-content: flex-end;
 }
 
+.section__content {
+    height: 90%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.section__btns {
+    height: 10%;
+}
+
 /* COMPONENTS */
 
 /* button */
 .btns {
     width: 20rem;
 
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    column-gap: 0.5rem;
-    row-gap: 0.5rem;
-}
-
-.btns--quote {
     display: flex;
-    justify-content: center;
-    align-items: center;
-
-    width: 8rem;
-    margin-bottom: 2rem;
+    flex-direction: column;
+    gap: 1rem;
 }
 
 .btns__btn {
@@ -69,14 +74,19 @@
 
     background-color: var(--color__secondary);
     border: solid 0.3rem var(--color__tertiary);
-    border-radius: 2rem;
-    max-height: 5rem;
+    border-radius: 1rem;
+    height: 5rem;
     width: 100%;
     padding: 1rem;
 
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.btns__btn--s {
+    height: 2rem;
+
 }
 
 .hide {
