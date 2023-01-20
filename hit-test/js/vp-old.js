@@ -26,7 +26,7 @@ const app = () => {
         const scene = new THREE.Scene();
 
         const directionalLight = new THREE.DirectionalLight(0xffffff, 0.3);
-        directionalLight.position.set(0, -5, 5);
+        directionalLight.position.set(0, 1, 10);
         scene.add(directionalLight);
         const loader = new GLTFLoader();
         let reticle;
