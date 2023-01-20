@@ -26,7 +26,7 @@ const app = () => {
         const scene = new THREE.Scene();
 
         const directionalLight = new THREE.DirectionalLight(0xffffff, 0.3);
-        directionalLight.position.set(0, 0, 0);
+        directionalLight.position.set(0, -5, 5);
         scene.add(directionalLight);
         const loader = new GLTFLoader();
         let reticle;
@@ -44,8 +44,8 @@ const app = () => {
             alienUrl,
             function(gltf){
                 alien = gltf.scene;
-                alien.scale.set(0.05,0.05,0.05);
-                alien.position.set(1, 1, 1)
+                alien.scale.set(0.5,0.5,0.5);
+                alien.position.set(0, -1, -2);
                 alien.visible = true;
                 scene.add(alien);
             }
