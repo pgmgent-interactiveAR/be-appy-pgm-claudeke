@@ -3,7 +3,8 @@
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Shoulder Pet</title>
-    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="../styles/shoulder-pet.css">
+    <link rel="stylesheet" href="../styles/main.css">
 
     <script src="https://cdn.jsdelivr.net/gh/hiukim/mind-ar-js@1.1.5/dist/mindar-face.prod.js"></script>
     <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
@@ -14,24 +15,34 @@
     <a-scene class="app__webcam" mindar-face embedded color-space="sRGB" renderer="colorManagement: true, physicallyCorrectLights"
     vr-mode-ui="enabled: false" device-orientation-permission-ui="enabled: false">
         <a-assets class="app__models">
-            <a-asset-item id="hand" response-type="arraybuffer" src="./assets/models/hand-animated.glb"></a-asset-item>
+            <a-asset-item id="alien" response-type="arraybuffer" src="../dist/assets/models/alien_animations.glb"></a-asset-item>
         </a-assets>
         <a-camera active="false" position="0 0 0"></a-camera>
         <a-entity id="model-box" mindar-face-target="anchorIndex: 152">
-            <a-gltf-model id="model--hand" visible="false" position="0 0 0" rotation="0 0 0" scale="1.1 1.1 1.1" src="#hand"></a-gltf-model>
+            <a-gltf-model id="model--alien" position="0.65 -0.1 0" rotation="0 0 0" scale="0.3 0.3  0.3" src="#alien" animation-mixer="clip: wave; loop: true;"></a-gltf-model>
         </a-entity>
     </a-scene>
 
-    <div class="app__controls">
-        <button class="app__btn app__btn--record">
-            Dance
-        </button>
-        <button class="app__btn app__btn--stop app__btn--selected">
-            Float
-        </button>
-        <button class="app__btn app__btn--transcript">
-            Kick
-        </button>
+    <div class="controls">
+        <div class="controls__container">
+            <button class="controls__btn" data-animation="dance">
+                Dance
+            </button>
+            <button class="controls__btn" data-animation="wave">
+                Wave
+            </button>
+            <button class="controls__btn" data-animation="twerk">
+                Twerk
+            </button>
+            <button class="controls__btn" data-animation="kiss">
+                Kiss
+            </button>
+            <button class="controls__btn" data-animation="stand">
+                Stand
+            </button>
+        </div>
     </div>
+
+    <script src="../js/sp.js"></script>
 </body>
 </html>
