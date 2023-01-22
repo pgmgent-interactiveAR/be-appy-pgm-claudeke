@@ -1,7 +1,5 @@
 const controlBtn = document.querySelectorAll('.controls__btn');
-const alien = document.querySelectorAll('#model--alien');
-
-console.log(alien.getAttribute('animation-mixer'));
+const alien = document.querySelectorAll('#model--alien')[0];
 
 const animationList = [
     {
@@ -9,6 +7,11 @@ const animationList = [
     position: {
         x: 0.65,
         y: -0.1,
+        z: 0,
+    },
+    rotation: {
+        x: 0,
+        y: 0,
         z: 0,
     }
     },
@@ -18,6 +21,11 @@ const animationList = [
         x: 0.65,
         y: -0.1,
         z: 0,
+    },
+    rotation: {
+        x: 0,
+        y: 0,
+        z: 0,
     }
     },
     {
@@ -26,13 +34,23 @@ const animationList = [
         x: 0.65,
         y: -0.1,
         z: 0,
+    },
+    rotation: {
+        x: 0,
+        y: 0,
+        z: 0,
     }
     },
     {
     animationName: 'stand',
     position: {
         x: 0.65,
-        y: 0.7,
+        y: -0.1,
+        z: 0,
+    },
+    rotation: {
+        x: 0,
+        y: 0,
         z: 0,
     }
     },
@@ -55,17 +73,12 @@ controlBtn.forEach(btn => {
     btn.addEventListener('click', (e) => {
         const chosenAnimation = animationList.find(animationItem => animationItem.animationName === btn.dataset.animation)
     
-        console.log('clicked ')
         alien.setAttribute('position', chosenAnimation.position);
+        alien.setAttribute('rotation', chosenAnimation.rotation);
         alien.setAttribute('animation-mixer', {
             clip: chosenAnimation.animationName
         });
-
-        if (chosenAnimation.rotation) {
-            alien.setAttribute('rotation', chosenAnimation.rotation);
-        };
     })
 });
 
-console.log('test')
 

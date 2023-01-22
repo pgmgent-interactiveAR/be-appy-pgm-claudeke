@@ -2,7 +2,7 @@ const firstWord = ['Be', 'Act', 'Clear'];
 const secondWord = ['Celestial', 'Cosmic', 'Astronomical'];
 const thirdWord = ['Expectation', 'Mistakes', 'Yourself'];
 
-const bgImages = ['aldebaran-s-uXchDIKs4qI-unsplash.jpg', 'guillaume-le-louarn-uC21aXJ7yQs-unsplash.jpg', 'shot-by-cerqueira-0o_GEzyargo-unsplash.jpg']
+const bgImages = ['aldebaran-s-uXchDIKs4qI-unsplash.jpg', 'vincentiu-solomon-ln5drpv_ImI-unsplash.jpg', 'shot-by-cerqueira-0o_GEzyargo-unsplash.jpg', 'aldebaran-s-qtRF_RxCAo0-unsplash.jpg']
 
 const generateBtn = document.querySelector('#generate');
 
