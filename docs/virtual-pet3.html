@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, user-scalable=no, maximum-scale=1.0, minimum-scale=1.0">
+    <title>Virtual Pet</title>
+    <!-- gltf loader lib toevoegen -->
+    <link rel="stylesheet" href="../styles/master.css">
+</head>
+
+<body>
+
+    <div class="loading hidden" id="js-loader">
+        <div class="loader"></div>
+    </div>
+    <button id="startAR">Start AR</button>
+    <div id="app" class="controls hidden">
+        <div id="home-menu" class="controls__inner">
+
+            <div id="targetDotDiv">
+                <span class="targetDot">.</span>
+            </div>
+
+            <div id="rotateLeftButtonDiv">
+                <div id="rotateLeftButton" class="rotateActionButton">
+                    Rotate Left
+                </div>
+            </div>
+
+            <div id="rotateRightButtonDiv">
+                <div id="rotateRightButton" class="rotateActionButton">
+                    Rotate Right
+                </div>
+            </div>
+
+            <div id="checkButtonDiv" class="confirmActionButtonDiv">
+                <div id="checkButton" class="confirmActionButton">
+                    Tick
+                </div>
+            </div>
+
+            <div id="trashButtonDiv" class="confirmActionButtonDiv">
+                <div id="trashButton" class="confirmActionButton">
+                    Trash
+                </div>
+            </div>
+
+            <div id="cancelButtonDiv" class="cancelActionButtonDiv">
+                <div id="cancelButton" class="cancelActionButton">
+                    Close
+                </div>
+            </div>
+
+            <div class="danceControlDiv">
+                <div id="dance1Div" class="danceButtonDiv confirmActionButton danceButtonDiv">
+                    <div id="dance1Button" class="danceButton" data-el="dance">
+                        Hiphop
+                    </div>
+                </div>
+                <div id="dance2Div" class="danceButtonDiv confirmActionButton danceButtonDiv">
+                    <div id="dance2Button" class="danceButton" data-el="float">
+                        Float
+                    </div>
+                </div>
+            </div>
+
+            <div class="modelControlDiv">
+                <div id="" class="modelButtonDiv confirmActionButton modelButtons">
+                    <div id="" class="danceButton" data-el="0">
+                        Prev
+                    </div>
+                </div>
+                <div id="" class="modelButtonDiv confirmActionButton modelButtons">
+                    <div id="" class="danceButton" data-el="1">
+                        Next
+                    </div>
+                </div>
+            </div>
+
+            <!-- <div id="cancelPlaceModelButtonDiv" class="cancelActionButtonDiv">
+                <div id="cancelPlaceModelButton" class="cancelActionButton">
+                  <img src="/assets/icons/closeIcon.svg" alt="Close icon">
+                </div>
+              </div> -->
+        </div>
+
+    </div>
+    <script type="module" src="../js/vp-main.js"></script>
+</body>
+
+</html>
