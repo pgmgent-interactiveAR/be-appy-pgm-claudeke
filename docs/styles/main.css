@@ -32,28 +32,32 @@
     gap: 2rem;
 }
 
-.section--home {
-    background-color: var(--color__primary);
+/* COMPONENTS */
+
+/* to home */
+.to-home {
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
 }
 
-.section--quote, .section--pet {
-    justify-content: flex-end;
-}
+.to-home__link {
+    line-height: 1;
 
-.section__content {
-    height: 90%;
-
+    height: 2.5rem; 
+    aspect-ratio: 1/1;
     display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
+
+    background-color: var(--color__secondary);
+    border: solid 0.3rem var(--color__tertiary);
+    border-radius: 1rem;
 }
 
-.section__btns {
-    height: 10%;
+.to-home__img {
+    height: 1rem;
 }
-
-/* COMPONENTS */
 
 /* button */
 .btns {
