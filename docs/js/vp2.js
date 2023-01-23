@@ -1,5 +1,5 @@
 const controlBtn = document.querySelectorAll('.controls__btn');
-const alien = document.querySelectorAll('#model--alien')[0];
+const alien = document.querySelectorAll('#model')[0];
 console.log(alien)
 
 const animationList = [
