@@ -17,5 +17,5 @@ generateBtn.addEventListener('click', (ev) => {
     lineTwo.innerHTML = secondWord[Math.floor(Math.random() * firstWord.length)];
     lineThree.innerHTML = thirdWord[Math.floor(Math.random() * firstWord.length)];
     randomBg = bgImages[Math.floor(Math.random() * firstWord.length)];
-    backGround.innerHTML = `<img class="background__image" src="../dist/assets/images/${randomBg}" alt="${randomBg}">`
+    backGround.innerHTML = `<img class="background__image" src="./dist/assets/images/${randomBg}" alt="${randomBg}">`
 })
