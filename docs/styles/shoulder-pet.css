@@ -16,9 +16,6 @@ body {
     left: 0;
     bottom: 0;
 
-    background-color: var(--color__primary);
-    padding: 1.5rem 0;
-
     width: 100%;
 
     display: flex;
@@ -26,28 +23,6 @@ body {
     justify-content: center;
     align-items: center;
     gap: 2rem;
-}
-
-.controls::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 80%;
-    width: 1.5rem;
-    background: rgb(189,224,56);
-    background: linear-gradient(-90deg, rgba(189,224,56,0) 0%, rgba(189,224,56,1) 100%);
-}
-
-.controls::after {
-    content: "";
-    position: absolute;
-    top: 0;
-    right: 0;
-    height: 80%;
-    width: 1.5rem;
-    background: rgb(189,224,56);
-    background: linear-gradient(90deg, rgba(189,224,56,0) 0%, rgba(189,224,56,1) 100%);
 }
 
 .controls__container {
@@ -61,6 +36,8 @@ body {
 
     overflow-y: scroll;
 
+    background-color: var(--color__primary);
+    padding: 1rem;
 }
 
 .controls__btn {
