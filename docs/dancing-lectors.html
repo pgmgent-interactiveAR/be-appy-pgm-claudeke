@@ -1,15 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Be Appy - Dancing Lectors</title>
-    <link rel="stylesheet" href="../styles/main.css">
-</head>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Be Appy | Virtual Pet</title>
+        <link rel="stylesheet" href="./styles/shoulder-pet.css">
+        <link rel="stylesheet" href="./styles/main.css">
+    
+        <script src="https://aframe.io/releases/1.4.0/aframe.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/gh/n5ro/aframe-physics-system@v4.0.1/dist/aframe-physics-system.min.js"></script>  
+        <script src="https://cdn.jsdelivr.net/gh/donmccurdy/aframe-extras@v6.1.1/dist/aframe-extras.min.js"></script>  
+    </head>
 <body>
-    <section class="section">
+    <a-scene background="color: #BDE038" webxr="optionalFeatures: hit-test, dom-overlay; overlayElement: #controls-overlay;" physics="debug: false" vr-mode-ui="enabled: true">
+        <a-assets>
+            <a-asset-item id="helena" src="./dist/assets/models/Helena-lowres-animations.glb"></a-asset-item>
+        </a-assets>
 
-    </section>
+        <a-entity id="model" gltf-model="#helena" scale="0.0003 0.0003  0.0003" position="0 1.3 -0.6" modify-materials animation-mixer="clip: idle; loop: true;"></a-entity>
+
+        <a-entity ar-hit-test="doHitTest:false" visible="false">
+            <a-plane rotation="-90 0 0" width="0.2" height="0.2"></a-plane>
+        </a-entity>
+
+        <a-camera></a-camera>
+    </a-scene>
+
+    <div class="controls" id="controls-overlay" style="display: flex; align-items: flex-end; padding: 0;">
+        <div class="controls__container">
+            <button class="controls__btn" data-animation="sillydance1">
+                Dance1
+            </button>
+            <button class="controls__btn" data-animation="twerk">
+                Twerk
+            </button>
+            <button class="controls__btn" data-animation="idle">
+                Idle
+            </button>
+            <button class="controls__btn" data-animation="flair">
+                Flair
+            </button>
+        </div>
+    </div>
+
+    <script src="./js/dl.js"></script>
+    <script src="./js/vp2-ar.js"></script>
 </body>
 </html>
