@@ -1,3 +1,26 @@
+.to-home {
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+}
+
+.controls__link {
+    line-height: 1;
+
+    height: 2.5rem;
+    aspect-ratio: 1/1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-color: var(--color__secondary);
+    border: solid 0.3rem var(--color__tertiary);
+    border-radius: 1rem;
+}
+
+.controls__img {
+    height: 1rem;
+}
 
 .btns--quote {
     display: flex;

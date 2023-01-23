@@ -10,6 +10,13 @@ body {
     position: relative;
 } 
 
+/* TO HOME */
+.to-home {
+    position: absolute;
+    left: 1rem;
+    top: 1rem;
+}
+
 /* CONTROLS */
 .controls {
     position: absolute;
@@ -60,6 +67,24 @@ body {
     width: 6rem;
 
     padding: 0 1rem;
+}
+
+.controls__link {
+    line-height: 1;
+
+    height: 2.5rem;
+    aspect-ratio: 1/1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-color: var(--color__secondary);
+    border: solid 0.3rem var(--color__tertiary);
+    border-radius: 1rem;
+}
+
+.controls__img {
+    height: 1rem;
 }
 
 .controls__btn:hover {

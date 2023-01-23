@@ -11,7 +11,7 @@
         <script src="https://cdn.jsdelivr.net/gh/donmccurdy/aframe-extras@v6.1.1/dist/aframe-extras.min.js"></script>  
     </head>
 <body>
-    <a-scene background="color: #BDE038" webxr="optionalFeatures: hit-test, dom-overlay; overlayElement: #controls-overlay;" physics="debug: false" vr-mode-ui="enabled: true">
+    <a-scene background="color: #0FC2C0" webxr="optionalFeatures: hit-test, dom-overlay; overlayElement: #controls-overlay;" physics="debug: false" vr-mode-ui="enabled: true" ar-hit-test="target:#model;">
         <a-assets>
             <a-asset-item id="alien" src="./dist/assets/models/alien_animations.glb"></a-asset-item>
         </a-assets>
@@ -40,9 +40,13 @@
                 Stand
             </button>
         </div>
+        <div class="to-home">
+            <a href="/docs" class="controls__link">
+                <img class="controls__img" src="./dist/assets/svg/house-solid.svg" alt="">
+            </a>
+        </div>
     </div>
 
     <script src="./js/vp2.js"></script>
-    <script src="./js/vp2-ar.js"></script>
 </body>
 </html>

@@ -1,6 +1,5 @@
 const controlBtn = document.querySelectorAll('.controls__btn');
 const alien = document.querySelectorAll('#model')[0];
-console.log(alien)
 
 const animationList = [
     {
@@ -17,8 +16,6 @@ const animationList = [
     },
 ];
 
-console.log(alien);
-
 controlBtn.forEach(btn => {
     btn.addEventListener('click', (e) => {
         const chosenAnimation = animationList.find(animationItem => animationItem.animationName === btn.dataset.animation)
@@ -29,4 +26,3 @@ controlBtn.forEach(btn => {
     })
 });
 
-console.log('test')
