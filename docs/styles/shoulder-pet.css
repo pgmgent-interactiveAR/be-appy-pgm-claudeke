@@ -90,3 +90,7 @@ body {
 .controls__btn:hover {
     cursor: pointer;
 }
+
+.a-enter-ar {
+    right: 0;
+}
