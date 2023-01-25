@@ -92,5 +92,5 @@ body {
 }
 
 .a-enter-ar {
-    right: 0;
+    right: 0!important;
 }

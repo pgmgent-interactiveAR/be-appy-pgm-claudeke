@@ -31,7 +31,7 @@ AFRAME.registerComponent('ar-hit-test', {
 			session.addEventListener('select', function () {
 				let position = element.getAttribute('position');
 
-				document.getElementById('dino').setAttribute('position', position);
+				document.getElementById('model').setAttribute('position', position);
 				document.getElementById('light').setAttribute('position', {
 					x: (position.x - 2),
 					y: (position.y + 4),
